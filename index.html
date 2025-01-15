@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="new.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        publicKey: "rW-kdb6hjpIsm0qq2",
+      });
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          // these IDs from the previous steps
+          emailjs.sendForm("service_ctvoqfi", "template_kyq4zex", this).then(
+            () => {
+              console.log("SUCCESS!");
+            },
+            (error) => {
+              console.log("FAILED...", error);
+            }
+          );
+        });
+    };
+  </script>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="">About</a></li>
+        <li><a href="#skills">Projects</a></li>
+        <li><a href="#contact-div" style="margin-left: 40px;">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="h-[75px]"></div>
+
+    <div id="container">
+      <div id="intro" class="grid grid-cols-2 p-6 border">
+        <div id="text" class="">
+          <section>
+            <h1>
+              <span id="hello-span"
+                ><span class="hello">Hello!</span> My name is</span
+              ><span id="name-span" class=""> Shreeyanshi Shukla</span>
+            </h1>
+          </section>
+
+          <div>
+            <br /><br />
+            <span
+              class="flex gap-x-3 justify-center items-center w-[280px] h-[60px] mx-auto rounded-full py-2.5 px-1"
+              id="links"
+            >
+              <!-- <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Md Tanvirul Haque - Flaticon</a> -->
+              <a
+                href="https://www.linkedin.com/in/shreeyanshi-shukla-7411aa285/"
+                class="icon"
+                target="_blank"
+                ><img src="/linkedin.png" alt=""
+              /></a>
+              <a
+                href="https://github.com/shreeyanshiShukla41/"
+                class="icon"
+                target="_blank"
+                ><img src="/github.png" alt=""
+              /></a>
+              <a
+                href="https://leetcode.com/u/codingnew50/"
+                class="icon"
+                target="_blank"
+                ><img src="/leetcode.png" style="border-radius: 50%"
+              /></a>
+              <a
+                href="https://www.geeksforgeeks.org/user/shreeyanshfckm/"
+                target="_blank"
+                class="icon"
+                ><img src="/gfg.png" style="border-radius: 50%"
+              /></a>
+            </span>
+          </div>
+          <!-- class="resume-div flex w-[800px] gap-x-3 items-center mx-auto" 
+        <td>    <p class="text-xl text-semibold text-rose-500">Download My Resume</p>
+      </td> 
+        -->
+          <div>
+            <table class="mx-auto">
+              <tr>
+                <td>
+                  <section class="resume text-xl flex">
+                    <button onclick="downloadResume()" id="d-resume">
+                      Download Resume
+                    </button>
+                  </section>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="image" class="px-4">
+          <img src="/pic-portfolio.jpg" alt="image......" class="mx-auto" />
+        </div>
+      </div>
+
+      <div id="skills" class="mt-8 border p-4">
+        <h1 class="text-3xl text-center"><b>Skills</b></h1>
+        <div
+          id="box"
+          class="grid grid-rows-2 md:grid-cols-2 gap-3 mt-4 mx-4 text-md"
+        >
+          <div class="skills">
+            <span>CSS</span>
+            <div id="css-grade">
+              <span
+                class="range-span"
+                id="css-r"
+                style="--skill-percent: 60%"
+              ></span>
+            </div>
+            <span id="css-percent"></span>
+          </div>
+          <div class="skills">
+            <span>HTML</span>
+            <div id="html-grade">
+              <span
+                class="range-span"
+                id="html-r"
+                style="--skill-percent: 80%"
+              ></span>
+            </div>
+            <span id="html-percent"></span>
+          </div>
+          <div class="skills">
+            <span>JAVASCRIPT</span>
+            <div id="js-grade">
+              <span
+                class="range-span"
+                id="js-r"
+                style="--skill-percent: 70%"
+              ></span>
+            </div>
+            <span id="js-percent"></span>
+          </div>
+          <div class="skills">
+            <span>MYSQL</span>
+            <div id="mysql-grade">
+              <span
+                class="range-span"
+                id="mysql-r"
+                style="--skill-percent: 60%"
+              ></span>
+            </div>
+            <span id="mysql-percent"></span>
+          </div>
+          <div class="skills">
+            <span>REACTJS</span>
+            <div id="react-grade">
+              <span
+                class="range-span"
+                id="react-r"
+                style="--skill-percent: 40%"
+              ></span>
+            </div>
+            <span id="react-percent"></span>
+          </div>
+          <div class="skills">
+            <span>MONGODB</span>
+            <div id="mongo-grade">
+              <span
+                class="range-span"
+                id="mongo-r"
+                style="--skill-percent: 50%"
+              ></span>
+            </div>
+            <span id="mongo-percent"></span>
+          </div>
+          <div class="skills">
+            <span>EXPRESSJS</span>
+            <div id="express-grade">
+              <span
+                class="range-span"
+                id="express-r"
+                style="--skill-percent: 50%"
+              ></span>
+            </div>
+            <span id="express-percent"></span>
+          </div>
+          <div class="skills">
+            <span>NODEJS</span>
+            <div id="node-grade">
+              <span
+                class="range-span"
+                id="node-r"
+                style="--skill-percent: 50%"
+              ></span>
+            </div>
+            <span id="node-percent"></span>
+          </div>
+          <div class="skills">
+            <span>CORE JAVA</span>
+            <div id="node-grade">
+              <span
+                class="range-span"
+                id="java-r"
+                style="--skill-percent: 60%"
+              ></span>
+            </div>
+            <span id="java-percent"></span>
+          </div>
+          <div class="skills">
+            <span>PYTHON FOR PROBLEM SOLVING</span>
+            <div id="python-grade">
+              <span
+                class="range-span"
+                id="python-r"
+                style="--skill-percent: 70%"
+              ></span>
+            </div>
+            <span id="python-percent"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="projects" class="flex mt-8">
+        <table class="border-separate w-[100%]">
+          <thead>
+            <tr>
+              <th class="align-center text-3xl" colspan="2">Projects</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="border-4 rounded-lg border-black-500">
+                  <h1 class="text-xl text-rose-600 inline">
+                    Project 1: Airbnb Clone
+                  </h1>
+
+                  <span class="text-xl"><b>Tech Stack:</b></span>
+                  <span class="text-lg"
+                    >ExpressJS, MongoDB, NodeJS, BootStrap</span
+                  >
+                  <span class="text-xl github-link"
+                    ><a
+                      href="https://github.com/shreeyanshiShukla41/AirbnbClone"
+                      target="_blank"
+                      >| Github</a
+                    ></span
+                  >
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="border-4 rounded-lg border-black-500">
+                  <h1 class="text-xl text-rose-600 inline">
+                    Project 2: Realtime Chatting App
+                  </h1>
+                  <span class="text-xl"><b>Tech Stack:</b></span>
+                  <span class="text-lg"
+                    >ExpressJS, MongoDB, NodeJS, ReactJS</span
+                  >
+                  <span class="text-xl github-link"
+                    ><a
+                      href="https://github.com/shreeyanshiShukla41/Chatting_App_-Major-Project-"
+                      target="_blank"
+                      >| Github</a
+                    ></span
+                  >
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="contact-div">
+        <form name="myForm" id="contact-form" class="text-center text-xl text-semibold" onsubmit="return validateForm()">
+          <h1 class="text-3xl underline font-bold">Contact/Feedback Form</h1>
+          <br /><br />
+
+          <!-- To simplify the tutorial, the value is static. -->
+
+          <input type="hidden" name="contact_number" value="697483" />
+
+          <label>Name</label>
+          <input type="text" name="user_name" /><br /><br />
+
+          <label>Email</label>
+          <input type="email" name="user_email" /><br /><br />
+
+          <label>Message</label>
+          <textarea name="message" cols="20" rows="5"></textarea><br /><br />
+
+          <button type="submit">Send</button>
+        </form>
+        <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Vlad Szirka - Flaticon</a> -->
+        <div class="flex w-[100%] items-center justify-center">
+          Made with &nbsp;<img src="heart.png" id="heart" />&nbsp; from &nbsp
+          <a href="https://www.emailjs.com/" id="emailjs">EMAILJS</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      function downloadResume() {
+        // Provide the path to your resume file
+        const link = document.createElement("a");
+        link.href = "Shreeyanshishukla(3).pdf"; // Ensure "resume.pdf" is in the same directory or provide the full path
+        link.download = `Shreeyanshi's_Resume.pdf`;
+        link.click();
+      }
+
+      function validateForm() {
+        let x = document.forms["myForm"]["user_name"].value;
+        let y=document.forms["myForm"]["user_email"].value;
+        let z=document.forms["myForm"]["message"].value;
+        if (x === "" || y==="" || z==="") {
+          alert("Fill all details");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
