@@ -18,7 +18,13 @@ nav{
   /* padding: 5px; */
 }
 
-
+/*copied from gfg */
+#intro-para{
+  background: linear-gradient(to right, #f32170, 
+  #ff6b08, #cf23cf, #eedd44); 
+-webkit-text-fill-color: transparent; 
+-webkit-background-clip: text; 
+}
 
 nav ul{
   list-style: none;
@@ -107,6 +113,11 @@ nav ul li a:hover{
   left: 50%;
   translate: -50% -50%;
   z-index: -1;
+}
+
+.resume a{
+  color: #000;
+  margin: 2px auto ;
 }
 
 ::-webkit-scrollbar{
