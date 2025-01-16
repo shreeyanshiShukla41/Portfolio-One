@@ -63,7 +63,6 @@
               ><span id="name-span" class=""> Shreeyanshi Shukla</span>
             </h1>
           </section>
-
           <div>
             <br /><br />
             <span
@@ -106,9 +105,7 @@
               <tr>
                 <td>
                   <section class="resume text-xl flex">
-                    <button onclick="downloadResume()" id="d-resume">
-                      Download Resume
-                    </button>
+                 <a href="https://drive.google.com/file/d/1l4CIWUSf4H87mg8USPhh8Gem1YLNGQ9t/view?usp=sharing" target="_blank">Download Resume</a>
                   </section>
                 </td>
               </tr>
@@ -325,9 +322,10 @@
       function downloadResume() {
         // Provide the path to your resume file
         const link = document.createElement("a");
-        link.href = "Shreeyanshishukla(3).pdf"; // Ensure "resume.pdf" is in the same directory or provide the full path
-        link.download = `Shreeyanshi's_Resume.pdf`;
-        link.click();
+        // link.href = ; // Ensure "resume.pdf" is in the same directory or provide the full path
+        console.log(link)
+        // link.download = `Shreeyanshi's_Resume.pdf`;
+        // link.click();
       }
 
       function validateForm() {
